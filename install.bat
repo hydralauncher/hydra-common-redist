@@ -31,6 +31,4 @@ if exist vcredist_x86.exe vcredist_x86.exe /quiet /norestart
 
 :: Install XNA Framework 4.0
 if exist xnafx40_redist.msi msiexec /i xnafx40_redist.msi /quiet /norestart
-
 echo Installation complete!
-pause
