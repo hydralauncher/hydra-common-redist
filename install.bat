@@ -22,9 +22,10 @@ if exist dotNetFx40_Full_setup.exe (
 )
 
 :: Install DirectX
-if exist dotNetFx40_Full_setup.exe (
+if exist directx_Jun2010_redist.exe (
     echo Installing DirectX >> %LOG_FILE%
-    dotNetFx40_Full_setup.exe /Q
+    directx_Jun2010_redist.exe /Q /T:"%TEMP%\dx"
+    rd /s /q "%TEMP%\dx"
 )
 
 :: Install OpenAL
