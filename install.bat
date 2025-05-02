@@ -22,9 +22,9 @@ if exist dotNetFx40_Full_setup.exe (
 )
 
 :: Install DirectX
-if exist dxwebsetup.exe (
+if exist dotNetFx40_Full_setup.exe (
     echo Installing DirectX >> %LOG_FILE%
-    dxwebsetup.exe /Q
+    dotNetFx40_Full_setup.exe /Q
 )
 
 :: Install OpenAL
@@ -33,24 +33,10 @@ if exist oalinst.exe (
     oalinst.exe /silent
 )
 
-:: Install Visual C++ Redistributables (2015-2019)
-if exist vcredist_2015-2019_x64.exe (
-    echo Installing Visual C++ Redistributable 2015-2019 ^(x64^) >> %LOG_FILE%
-    vcredist_2015-2019_x64.exe /quiet /norestart
-)
-if exist vcredist_2015-2019_x86.exe (
-    echo Installing Visual C++ Redistributable 2015-2019 ^(x86^) >> %LOG_FILE%
-    vcredist_2015-2019_x86.exe /quiet /norestart
-)
-
-:: Install older Visual C++ Redistributables
-if exist vcredist_x64.exe (
-    echo Installing Visual C++ Redistributable ^(x64^) >> %LOG_FILE%
-    vcredist_x64.exe /quiet /norestart
-)
-if exist vcredist_x86.exe (
-    echo Installing Visual C++ Redistributable ^(x86^) >> %LOG_FILE%
-    vcredist_x86.exe /quiet /norestart
+:: Install Visual C++ Redistributables AIO
+if exist VisualCppRedist_AIO_x86_x64.exe (
+    echo Installing Visual C++ Redistributable AIO >> %LOG_FILE%
+    VisualCppRedist_AIO_x86_x64.exe /ai /gm2
 )
 
 :: Install XNA Framework 4.0
