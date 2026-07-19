@@ -47,4 +47,3 @@ if exist xnafx40_redist.msi (
 )
 
 echo Installation complete >> %LOG_FILE%
-pause
